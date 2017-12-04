@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-12-03T11:55:44-08:00</updated><id>/</id><title type="html">William Diep</title><subtitle>I’m a software developer from the San Franciso Bay Area. I work primarily with ReactJS, NodeJS, and Django</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author><entry><title type="html">Are you overcomplicating your own learning?</title><link href="/2017/11/23/overcomplicate.html" rel="alternate" type="text/html" title="Are you overcomplicating your own learning?" /><published>2017-11-23T00:00:00-08:00</published><updated>2017-11-23T00:00:00-08:00</updated><id>/2017/11/23/overcomplicate</id><content type="html" xml:base="/2017/11/23/overcomplicate.html">&lt;h2 id=&quot;learning-a-new-concept-can-be-tricky-especially-when-you-sabotage-yourself&quot;&gt;Learning a new concept can be tricky, especially when you sabotage yourself.&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-12-03T21:41:33-08:00</updated><id>/</id><title type="html">William Diep</title><subtitle>I’m a software developer from the San Franciso Bay Area. I work primarily with ReactJS, NodeJS, and Django</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author><entry><title type="html">Are you overcomplicating your own learning?</title><link href="/2017/11/23/overcomplicate.html" rel="alternate" type="text/html" title="Are you overcomplicating your own learning?" /><published>2017-11-23T00:00:00-08:00</published><updated>2017-11-23T00:00:00-08:00</updated><id>/2017/11/23/overcomplicate</id><content type="html" xml:base="/2017/11/23/overcomplicate.html">&lt;h2 id=&quot;learning-a-new-concept-can-be-tricky-especially-when-you-sabotage-yourself&quot;&gt;Learning a new concept can be tricky, especially when you sabotage yourself.&lt;/h2&gt;
 
 &lt;h3 id=&quot;heres-how-it-happens&quot;&gt;Here’s how it happens:&lt;/h3&gt;
 &lt;p&gt;Quickly learn about A.
@@ -21,7 +21,7 @@ I tried, but it was too difficult. Maybe some other time.&lt;/p&gt;
 &lt;p&gt;Item C is not complicated. It just felt that way because you were trying to learn C while 80% of your brain was distracted trying to remember/learn A and remember/learn B.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-solution&quot;&gt;The solution:&lt;/h3&gt;
-&lt;p&gt;Get comfortable with one thing at a time. If you find yourself having to remember/learn B while you’re on C, then try going back to B and getting comfortable with it. Sometimes that can take as little as a few focused minutes.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author></entry><entry><title type="html">What are variables in JavaSript?</title><link href="/2017/11/16/variables.html" rel="alternate" type="text/html" title="What are variables in JavaSript?" /><published>2017-11-16T00:00:00-08:00</published><updated>2017-11-16T00:00:00-08:00</updated><id>/2017/11/16/variables</id><content type="html" xml:base="/2017/11/16/variables.html">&lt;h2 id=&quot;the-main-purpose-of-coding-is-to-solve-problems-what-happens-when-you-click-on-a-button-thats-also-a-problem-for-us-to-solve&quot;&gt;The main purpose of coding is to solve problems. What happens when you click on a button? That’s also a problem for us to solve.&lt;/h2&gt;
+&lt;p&gt;Get comfortable with one thing at a time. If you find yourself having to remember/learn B while you’re on C, then try going back to B and getting comfortable with it. Sometimes that can take as little as a few focused minutes.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author></entry><entry><title type="html">What are variables in JavaScript?</title><link href="/2017/11/16/variables.html" rel="alternate" type="text/html" title="What are variables in JavaScript?" /><published>2017-11-16T00:00:00-08:00</published><updated>2017-11-16T00:00:00-08:00</updated><id>/2017/11/16/variables</id><content type="html" xml:base="/2017/11/16/variables.html">&lt;h2 id=&quot;the-main-purpose-of-coding-is-to-solve-problems-what-happens-when-you-click-on-a-button-thats-also-a-problem-for-us-to-solve&quot;&gt;The main purpose of coding is to solve problems. What happens when you click on a button? That’s also a problem for us to solve.&lt;/h2&gt;
 
 &lt;p&gt;So, let’s begin this article by solving a simple problem.&lt;/p&gt;
 
@@ -35,4 +35,135 @@ What’s your answer?&lt;/p&gt;
 
 // Or this?
 4 + 27
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Both answers are right, but the second method is better, because you’re offloading the calculation to JavaScript. You’re teaching it how to arrive at the answer.&lt;/p&gt;
+
+&lt;p&gt;But there’s still one problem with the code.&lt;/p&gt;
+
+&lt;p&gt;If you look at &lt;code&gt;4 + 27&lt;/code&gt; without any context from our apple problem, do you know we’re calculating the number of apples you’re currently holding?
+Probably not.&lt;/p&gt;
+
+&lt;p&gt;So, a better way is to use Algebra to substitute 4 and 27 with variables. When you do so, you’ll get the ability to write code that has meaning:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initialApples + applesBought
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The process of substituting 4 with a variable called &lt;code&gt;initialApples&lt;/code&gt; is called declaring variables.&lt;/p&gt;
+
+&lt;h3 id=&quot;declaring-variables&quot;&gt;Declaring Variables&lt;/h3&gt;
+
+&lt;p&gt;You declare variables with the following syntax:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const variableName = 'value'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There are four parts you’ll want to take note of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The &lt;code&gt;variableName&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;value&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;=&lt;/code&gt; sign&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;const&lt;/code&gt; keyword&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-variablename&quot;&gt;The variableName&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;variableName&lt;/code&gt; is the name of the variable you’re declaring. You can name it anything, as long as it follows these rules:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It must be one word&lt;/li&gt;
+  &lt;li&gt;It must consist only of letters, numbers or underscores (0-9, a-z, A-Z, _).&lt;/li&gt;
+  &lt;li&gt;It cannot begin with a number.&lt;/li&gt;
+  &lt;li&gt;It cannot be any of these &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords&quot; target=&quot;_blank&quot;&gt;reserved keywords&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you need to use two or more words to name your variable, you should join the words together, but capitalize the first letter of each subsequent word. 
+This weird capitalization is called camel case.&lt;/p&gt;
+
+&lt;p&gt;A good example of a camel cased variable is &lt;code&gt;applesToBuy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-value&quot;&gt;The value&lt;/h4&gt;
+
+&lt;p&gt;The value is what you want the variable to be. It can be primitives (like strings and numbers etc) or objects (like arrays and functions).&lt;/p&gt;
+
+&lt;h4 id=&quot;-in-javascript&quot;&gt;= in JavaScript&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;=&lt;/code&gt; in JavaScript doesn’t work like &lt;code&gt;=&lt;/code&gt; in Math. Don’t get confused.&lt;/p&gt;
+
+&lt;p&gt;In JavaScript, &lt;code&gt;=&lt;/code&gt; means assignment. When you use &lt;code&gt;=&lt;/code&gt;, you set (or assign) the value on the right hand side (RHS) of the &lt;code&gt;=&lt;/code&gt; sign to the left hand side (LHS) of the &lt;code&gt;=&lt;/code&gt; sign.&lt;/p&gt;
+
+&lt;p&gt;In the following statement, you set the variable &lt;code&gt;initialApples&lt;/code&gt; to the number 4.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const initialApples = 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you console.log this variable, you can see that &lt;code&gt;initialApples&lt;/code&gt; is 4.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;console.log(initialApples) // 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;evaluation-before-assignment&quot;&gt;Evaluation before assignment&lt;/h4&gt;
+
+&lt;p&gt;Every variable can only take up one value. So, if you have an equation that needs to be evaluated on the RHS, it will be evaluated before it is assigned to the variable.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const initialApples = 4
+const applesToBuy = 27
+
+const totalApples = initialApples + applesToBuy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this example, JavaScript will evaluate the answer of &lt;code&gt;initialApples + applesToBuy&lt;/code&gt; (which results to &lt;code&gt;31&lt;/code&gt;) before assigning the results to &lt;code&gt;totalApples&lt;/code&gt;. This is why you get 31 if tried to log &lt;code&gt;totalApples&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;console.log(totalApples) // 31
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;the-const-keyword&quot;&gt;The const keyword&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;const&lt;/code&gt; is one of three keywords you can use to declare variables. There are two other keywords – &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;var&lt;/code&gt;.
+All three keywords declare variables, but they’re slightly different from each other.&lt;/p&gt;
+
+&lt;h3 id=&quot;const-vs-let-vs-var&quot;&gt;Const vs let vs var&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;const&lt;/code&gt; and &lt;code&gt;let&lt;/code&gt; are keywords made available to us in ES6. They are better keywords to create variables than &lt;code&gt;var&lt;/code&gt; because they’re block scoped while var is function scoped.&lt;/p&gt;
+
+&lt;p&gt;For now, let’s concentrate on the difference between &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;let&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;const-vs-let&quot;&gt;Const vs let&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;If you declare a variable with &lt;code&gt;const&lt;/code&gt;&lt;/strong&gt;, you cannot reassign it with a new value. The following code produces an error:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const applesToBuy = 22
+
+// Reassigning to a variable declared with const results in an error
+applesToBuy = 27
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;If you declare a variable with &lt;code&gt;let&lt;/code&gt;, you can reassign it with a new value.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let applesToBuy = 22
+applesToBuy = 27
+console.log(applesToBuy)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;should-you-use-const-or-let&quot;&gt;Should you use const or let?&lt;/h3&gt;
+
+&lt;p&gt;Understanding whether you should use &lt;code&gt;const&lt;/code&gt; or &lt;code&gt;let&lt;/code&gt; is more of an advanced topic.&lt;/p&gt;
+
+&lt;p&gt;When you’re starting out, using &lt;code&gt;let&lt;/code&gt; would be much simpler than using &lt;code&gt;const&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, as you write more programs, you’ll slowly realize that you want to refrain from reassigning your variables, and you’ll begin to use &lt;code&gt;const&lt;/code&gt; over &lt;code&gt;let&lt;/code&gt;. Why you’ll want to do so is a different topic for another day.&lt;/p&gt;
+
+&lt;p&gt;Since you’re going to use &lt;code&gt;const&lt;/code&gt; over &lt;code&gt;let&lt;/code&gt; anyway when you write more advanced programs, it’s better to get into the habit of preferring &lt;code&gt;const&lt;/code&gt; over &lt;code&gt;let&lt;/code&gt; when you’re starting out.&lt;/p&gt;
+
+&lt;p&gt;In case you’re wondering, don’t use var anymore, because there’s no need for it. &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; are much better than var.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h3&gt;
+
+&lt;p&gt;In JavaScript, variables are used to hold a value. It can hold any value, from primitives to objects.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;=&lt;/code&gt; sign in JavaScript isn’t the same as the &lt;code&gt;=&lt;/code&gt; sign in Math. In JavaScript, &lt;code&gt;=&lt;/code&gt; means assignment.&lt;/p&gt;
+
+&lt;p&gt;When you declare variables, use camelCase to name your variables. Avoid the reserved keywords.&lt;/p&gt;
+
+&lt;p&gt;You can declare variables with either &lt;code&gt;const&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; or &lt;code&gt;var&lt;/code&gt;. As much as possible, you’ll want to use &lt;code&gt;const&lt;/code&gt; over &lt;code&gt;let&lt;/code&gt;. Use &lt;code&gt;let&lt;/code&gt; when you need to reassign values. There’s no longer a need to use &lt;code&gt;var&lt;/code&gt;.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author></entry></feed>
