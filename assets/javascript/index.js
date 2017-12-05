@@ -1415,7 +1415,7 @@ $(function () {
   var data = [{
       action: 'type',
       strings: ["william.technologies"],
-      output: '<span class="gray">["ReactJS", "JavaScript/ES6", "NodeJS", "MongoDB", "HTML5/CSS3", "Django", "Python"]</span><br>&nbsp;',
+      output: '<span class="gray">["ReactJS", "JavaScript/ES6", "NodeJS", "MongoDB", "HTML5/CSS3", "Ruby on Rails"]</span><br>&nbsp;',
       postDelay: 1000
     },
     {
