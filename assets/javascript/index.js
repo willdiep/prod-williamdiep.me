@@ -1001,66 +1001,80 @@ $(document)
 
   });
 const stephanieMacbookProHover = $('.stephaniemankarios .md-macbook-pro .hover');
-    stephanieMacbookProHover.hover(function () {
-      stephanieMacbookProHover.fadeOut('slow');
-    });
+stephanieMacbookProHover.hover(() => {
+  stephanieMacbookProHover.fadeOut('slow');
+});
 
-    const stephanieIpadHover = $('.stephaniemankarios .md-ipad .hover');
-    stephanieIpadHover.hover(function () {
-      stephanieIpadHover.fadeOut('slow');
-    });
-		
-		const stephanieIphoneHover = $('.stephaniemankarios .md-iphone-5 .hover');
-		stephanieIphoneHover.hover(function () {
-			stephanieIphoneHover.fadeOut('slow');
-    });
+const stephanieIpadHover = $('.stephaniemankarios .md-ipad .hover');
+stephanieIpadHover.hover(() => {
+  stephanieIpadHover.fadeOut('slow');
+});
 
-    const sunsetcanvasawningMacbookProHover = $('.sunsetcanvasawning .md-macbook-pro .hover');
-    sunsetcanvasawningMacbookProHover.hover(function () {
-      sunsetcanvasawningMacbookProHover.fadeOut('slow');
-    });
+const stephanieIphoneHover = $('.stephaniemankarios .md-iphone-5 .hover');
+stephanieIphoneHover.hover(() => {
+  stephanieIphoneHover.fadeOut('slow');
+});
 
-    const sunsetcanvasawningIpadHover = $('.sunsetcanvasawning .md-ipad .hover');
-    sunsetcanvasawningIpadHover.hover(function () {
-      sunsetcanvasawningIpadHover.fadeOut('slow');
-    });
-		
-		const sunsetcanvasawningIphoneHover = $('.sunsetcanvasawning .md-iphone-5 .hover');
-		sunsetcanvasawningIphoneHover.hover(function () {
-			sunsetcanvasawningIphoneHover.fadeOut('slow');
-    });
+const sunsetcanvasawningMacbookProHover = $('.sunsetcanvasawning .md-macbook-pro .hover');
+sunsetcanvasawningMacbookProHover.hover(() => {
+  sunsetcanvasawningMacbookProHover.fadeOut('slow');
+});
 
-    
-    const spotonparkingMacbookProHover = $('.spotonparking .md-macbook-pro .hover');
-    spotonparkingMacbookProHover.hover(function () {
-      spotonparkingMacbookProHover.fadeOut('slow');
-    });
+const sunsetcanvasawningIpadHover = $('.sunsetcanvasawning .md-ipad .hover');
+sunsetcanvasawningIpadHover.hover(() => {
+  sunsetcanvasawningIpadHover.fadeOut('slow');
+});
 
-    const spotonparkingIpadHover = $('.spotonparking .md-ipad .hover');
-    spotonparkingIpadHover.hover(function () {
-      spotonparkingIpadHover.fadeOut('slow');
-    });
-		
-		const spotonparkingIphoneHover = $('.spotonparking .md-iphone-5 .hover');
-		spotonparkingIphoneHover.hover(function () {
-			spotonparkingIphoneHover.fadeOut('slow');
-    });
+const sunsetcanvasawningIphoneHover = $('.sunsetcanvasawning .md-iphone-5 .hover');
+sunsetcanvasawningIphoneHover.hover(() => {
+  sunsetcanvasawningIphoneHover.fadeOut('slow');
+});
 
-    const josiahhengphotographyMacbookProHover = $('.josiahhengphotography .md-macbook-pro .hover');
-    josiahhengphotographyMacbookProHover.hover(function () {
-      josiahhengphotographyMacbookProHover.fadeOut('slow');
-    });
 
-    const josiahhengphotographyIpadHover = $('.josiahhengphotography .md-ipad .hover');
-    josiahhengphotographyIpadHover.hover(function () {
-      josiahhengphotographyIpadHover.fadeOut('slow');
-    });
-		
-		const josiahhengphotographyIphoneHover = $('.josiahhengphotography .md-iphone-5 .hover');
-		josiahhengphotographyIphoneHover.hover(function () {
-			josiahhengphotographyIphoneHover.fadeOut('slow');
-    });
+const spotonparkingMacbookProHover = $('.spotonparking .md-macbook-pro .hover');
+spotonparkingMacbookProHover.hover(() => {
+  spotonparkingMacbookProHover.fadeOut('slow');
+});
 
+const spotonparkingIpadHover = $('.spotonparking .md-ipad .hover');
+spotonparkingIpadHover.hover(() => {
+  spotonparkingIpadHover.fadeOut('slow');
+});
+
+const spotonparkingIphoneHover = $('.spotonparking .md-iphone-5 .hover');
+spotonparkingIphoneHover.hover(() => {
+  spotonparkingIphoneHover.fadeOut('slow');
+});
+
+const josiahhengphotographyMacbookProHover = $('.josiahhengphotography .md-macbook-pro .hover');
+josiahhengphotographyMacbookProHover.hover(() => {
+  josiahhengphotographyMacbookProHover.fadeOut('slow');
+});
+
+const josiahhengphotographyIpadHover = $('.josiahhengphotography .md-ipad .hover');
+josiahhengphotographyIpadHover.hover(() => {
+  josiahhengphotographyIpadHover.fadeOut('slow');
+});
+
+const josiahhengphotographyIphoneHover = $('.josiahhengphotography .md-iphone-5 .hover');
+josiahhengphotographyIphoneHover.hover(() => {
+  josiahhengphotographyIphoneHover.fadeOut('slow');
+});
+
+const yaseenMacbookProHover = $('.yaseen .md-macbook-pro .hover');
+yaseenMacbookProHover.hover(() => {
+  yaseenMacbookProHover.fadeOut('fast');
+});
+
+const yaseenIpadHover = $('.yaseen .md-ipad .hover');
+yaseenIpadHover.hover(() => {
+  yaseenIpadHover.fadeOut('fast');
+});
+
+const yaseenIphoneHover = $('.yaseen .md-iphone-5 .hover');
+yaseenIphoneHover.hover(() => {
+  yaseenIphoneHover.fadeOut('fast');
+});
 // The MIT License (MIT)
 
 // Typed.js | Copyright (c) 2014 Matt Boldt | www.mattboldt.com
@@ -1415,7 +1429,7 @@ $(function () {
   var data = [{
       action: 'type',
       strings: ["william.technologies"],
-      output: '<span class="gray">["HTML5/CSS3", "JavaScript/ES6", "ReactJS", "NodeJS", "MongoDB", "Ruby on Rails", "PostgreSQL"]</span><br>&nbsp;',
+      output: '<span class="gray">["HTML5/CSS3", "JavaScript/ES6", "ReactJS", "NodeJS", "MongoDB"]</span><br>&nbsp;',
       postDelay: 1000
     },
     {
@@ -1440,4 +1454,3 @@ $(function () {
   ];
   runScripts(data, 0);
 });
-//# sourceMappingURL=index.js.map
