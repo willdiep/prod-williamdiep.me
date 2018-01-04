@@ -1166,6 +1166,23 @@ humanistIphoneHover.hover(() => {
   humanistIphoneHover.fadeOut('slow');
 });
 
+const ecologyCenterMacbookProHover = $('.ecologycenter .md-macbook-pro .hover');
+ecologyCenterMacbookProHover.hover(() => {
+  ecologyCenterMacbookProHover.fadeOut('slow');
+});
+
+const ecologyCenterIpadHover = $('.ecologycenter .md-ipad .hover');
+ecologyCenterIpadHover.hover(() => {
+  ecologyCenterIpadHover.fadeOut('slow');
+});
+
+const ecologyCenterIphoneHover = $('.ecologycenter .md-iphone-5 .hover');
+ecologyCenterIphoneHover.hover(() => {
+  ecologyCenterIphoneHover.fadeOut('slow');
+});
+
+
+
 // The MIT License (MIT)
 
 // Typed.js | Copyright (c) 2014 Matt Boldt | www.mattboldt.com
@@ -1545,3 +1562,4 @@ $(function () {
   ];
   runScripts(data, 0);
 });
+//# sourceMappingURL=index.js.map
