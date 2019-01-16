@@ -1,22 +1,440 @@
-<!DOCTYPE html><html lang=en><head><title>William Diep</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><link rel=apple-touch-icon sizes=180x180 href=/assets/images/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/assets/images/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/assets/images/favicons/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=theme-color content=#ffffff><!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]--><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic" rel=stylesheet><link rel=stylesheet href=/assets/stylesheets/style-ff864cb800.min.css><!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]--><!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]--></head><body><div id=wrapper><header id=header><a href=/ class=logo><strong>William Diep</strong> <span></span></a><nav><a href=#menu>Menu</a></nav></header><nav id=menu><ul class=links><li><a href=/ >Home</a></li><li><a href=projects.html>Projects</a></li><li><a href=about.html>About</a></li><li><a href=blog.html>Blog</a></li><li><a href=assets/williamdiepresume.pdf>Resume</a></li><li><a href=index.html#contact>Contact</a></li></ul><ul class="actions vertical"></ul><ul class=icons><li><a href=https://github.com/willdiep class="icon alt fa-github" target=_blank><span class=label>GitHub</span></a></li><li><a href=https://www.linkedin.com/in/wdiep class="icon alt fa-linkedin" target=_blank><span class=label>LinkedIn</span></a></li></ul></nav><div id=main class=alt><section id=one><div class=inner><header class=major><h1>What are variables in JavaScript?</h1></header><p></p><h2 id=the-main-purpose-of-coding-is-to-solve-problems-what-happens-when-you-click-on-a-button-thats-also-a-problem-for-us-to-solve>The main purpose of coding is to solve problems. What happens when you click on a button? That’s also a problem for us to solve.</h2><p>So, let’s begin this article by solving a simple problem.</p><h3 id=counting-apples>Counting apples</h3><p>If you have 4 apples and you buy 27 more, how many apples do you have? Take a second and write your answer in your text editor. What’s your answer?</p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>// This?
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>William Diep</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+	
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic" rel="stylesheet">
+
+  <!-- CSS -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/assets/stylesheets/style.css">
+  <!-- endinject -->
+
+	<!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+</head>
+
+
+<body>
+
+    <!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header">
+	<a href="/" class="logo"><strong>William Diep</strong> <span></span></a>
+	<nav>
+		<a href="#menu">Menu</a>
+	</nav>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+	<ul class="links">
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li><a href="/">Home</a></li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+
+		<!-- 
+			
+		
+			
+				<li><a href="/about.html">About</a></li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li><a href="/projects.html">Projects</a></li>
+			
+		
+			
+		
+			
+		 -->
+
+		<li><a href="projects.html">Projects</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="blog.html">Blog</a></li>
+		<li><a href="assets/williamdiepresume.pdf">Resume</a></li>
+		<li><a href="index.html#contact">Contact</a></li>
+	</ul>
+	<ul class="actions vertical">
+		<!-- <li><a href="#" class="button special fit">Get Started</a></li> -->
+		<!-- <li><a href="#" class="button fit">Log In</a></li> -->
+	</ul>
+	<ul class="icons">
+		
+		
+		
+		
+		
+		
+		
+		
+		<li><a href="https://github.com/willdiep" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+		
+		
+		
+		<li><a href="https://www.linkedin.com/in/wdiep" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+		
+	</ul>
+</nav>
+ 
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>What are variables in JavaScript?</h1>
+		</header>
+		
+		<p><h2 id="the-main-purpose-of-coding-is-to-solve-problems-what-happens-when-you-click-on-a-button-thats-also-a-problem-for-us-to-solve">The main purpose of coding is to solve problems. What happens when you click on a button? That’s also a problem for us to solve.</h2>
+
+<p>So, let’s begin this article by solving a simple problem.</p>
+
+<h3 id="counting-apples">Counting apples</h3>
+
+<p>If you have 4 apples and you buy 27 more, how many apples do you have? Take a second and write your answer in your text editor.
+What’s your answer?</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// This?
 31
 
 // Or this?
 4 + 27
-</code></pre></div></div><p>Both answers are right, but the second method is better, because you’re offloading the calculation to JavaScript. You’re teaching it how to arrive at the answer.</p><p>But there’s still one problem with the code.</p><p>If you look at <code>4 + 27</code> without any context from our apple problem, do you know we’re calculating the number of apples you’re currently holding? Probably not.</p><p>So, a better way is to use Algebra to substitute 4 and 27 with variables. When you do so, you’ll get the ability to write code that has meaning:</p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>initialApples + applesBought
-</code></pre></div></div><p>The process of substituting 4 with a variable called <code>initialApples</code> is called declaring variables.</p><h3 id=declaring-variables>Declaring Variables</h3><p>You declare variables with the following syntax:</p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>const variableName = 'value'
-</code></pre></div></div><p>There are four parts you’ll want to take note of:</p><ul><li>The <code>variableName</code></li><li>The <code>value</code></li><li>The <code>=</code> sign</li><li>The <code>const</code> keyword</li></ul><h4 id=the-variablename>The variableName</h4><p><code>variableName</code> is the name of the variable you’re declaring. You can name it anything, as long as it follows these rules:</p><ol><li>It must be one word</li><li>It must consist only of letters, numbers or underscores (0-9, a-z, A-Z, _).</li><li>It cannot begin with a number.</li><li>It cannot be any of these <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords target=_blank>reserved keywords</a></li></ol><p>If you need to use two or more words to name your variable, you should join the words together, but capitalize the first letter of each subsequent word. This weird capitalization is called camel case.</p><p>A good example of a camel cased variable is <code>applesToBuy</code>.</p><h4 id=the-value>The value</h4><p>The value is what you want the variable to be. It can be primitives (like strings and numbers etc) or objects (like arrays and functions).</p><h4 id=-in-javascript>= in JavaScript</h4><p><code>=</code> in JavaScript doesn’t work like <code>=</code> in Math. Don’t get confused.</p><p>In JavaScript, <code>=</code> means assignment. When you use <code>=</code>, you set (or assign) the value on the right hand side (RHS) of the <code>=</code> sign to the left hand side (LHS) of the <code>=</code> sign.</p><p>In the following statement, you set the variable <code>initialApples</code> to the number 4.</p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>const initialApples = 4
-</code></pre></div></div><p>If you console.log this variable, you can see that <code>initialApples</code> is 4.</p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>console.log(initialApples) // 4
-</code></pre></div></div><h4 id=evaluation-before-assignment>Evaluation before assignment</h4><p>Every variable can only take up one value. So, if you have an equation that needs to be evaluated on the RHS, it will be evaluated before it is assigned to the variable.</p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>const initialApples = 4
+</code></pre></div></div>
+
+<p>Both answers are right, but the second method is better, because you’re offloading the calculation to JavaScript. You’re teaching it how to arrive at the answer.</p>
+
+<p>But there’s still one problem with the code.</p>
+
+<p>If you look at <code>4 + 27</code> without any context from our apple problem, do you know we’re calculating the number of apples you’re currently holding?
+Probably not.</p>
+
+<p>So, a better way is to use Algebra to substitute 4 and 27 with variables. When you do so, you’ll get the ability to write code that has meaning:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>initialApples + applesBought
+</code></pre></div></div>
+
+<p>The process of substituting 4 with a variable called <code>initialApples</code> is called declaring variables.</p>
+
+<h3 id="declaring-variables">Declaring Variables</h3>
+
+<p>You declare variables with the following syntax:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const variableName = 'value'
+</code></pre></div></div>
+
+<p>There are four parts you’ll want to take note of:</p>
+
+<ul>
+  <li>The <code>variableName</code></li>
+  <li>The <code>value</code></li>
+  <li>The <code>=</code> sign</li>
+  <li>The <code>const</code> keyword</li>
+</ul>
+
+<h4 id="the-variablename">The variableName</h4>
+
+<p><code>variableName</code> is the name of the variable you’re declaring. You can name it anything, as long as it follows these rules:</p>
+
+<ol>
+  <li>It must be one word</li>
+  <li>It must consist only of letters, numbers or underscores (0-9, a-z, A-Z, _).</li>
+  <li>It cannot begin with a number.</li>
+  <li>It cannot be any of these <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords" target="_blank">reserved keywords</a></li>
+</ol>
+
+<p>If you need to use two or more words to name your variable, you should join the words together, but capitalize the first letter of each subsequent word. 
+This weird capitalization is called camel case.</p>
+
+<p>A good example of a camel cased variable is <code>applesToBuy</code>.</p>
+
+<h4 id="the-value">The value</h4>
+
+<p>The value is what you want the variable to be. It can be primitives (like strings and numbers etc) or objects (like arrays and functions).</p>
+
+<h4 id="-in-javascript">= in JavaScript</h4>
+
+<p><code>=</code> in JavaScript doesn’t work like <code>=</code> in Math. Don’t get confused.</p>
+
+<p>In JavaScript, <code>=</code> means assignment. When you use <code>=</code>, you set (or assign) the value on the right hand side (RHS) of the <code>=</code> sign to the left hand side (LHS) of the <code>=</code> sign.</p>
+
+<p>In the following statement, you set the variable <code>initialApples</code> to the number 4.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const initialApples = 4
+</code></pre></div></div>
+
+<p>If you console.log this variable, you can see that <code>initialApples</code> is 4.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log(initialApples) // 4
+</code></pre></div></div>
+
+<h4 id="evaluation-before-assignment">Evaluation before assignment</h4>
+
+<p>Every variable can only take up one value. So, if you have an equation that needs to be evaluated on the RHS, it will be evaluated before it is assigned to the variable.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const initialApples = 4
 const applesToBuy = 27
 
 const totalApples = initialApples + applesToBuy
-</code></pre></div></div><p>In this example, JavaScript will evaluate the answer of <code>initialApples + applesToBuy</code> (which results to <code>31</code>) before assigning the results to <code>totalApples</code>. This is why you get 31 if tried to log <code>totalApples</code>.</p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>console.log(totalApples) // 31
-</code></pre></div></div><h4 id=the-const-keyword>The const keyword</h4><p><code>const</code> is one of three keywords you can use to declare variables. There are two other keywords – <code>let</code> and <code>var</code>. All three keywords declare variables, but they’re slightly different from each other.</p><h3 id=const-vs-let-vs-var>Const vs let vs var</h3><p><code>const</code> and <code>let</code> are keywords made available to us in ES6. They are better keywords to create variables than <code>var</code> because they’re block scoped while var is function scoped.</p><p>For now, let’s concentrate on the difference between <code>const</code> and <code>let</code>.</p><h3 id=const-vs-let>Const vs let</h3><p><strong>If you declare a variable with <code>const</code></strong>, you cannot reassign it with a new value. The following code produces an error:</p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>const applesToBuy = 22
+</code></pre></div></div>
+
+<p>In this example, JavaScript will evaluate the answer of <code>initialApples + applesToBuy</code> (which results to <code>31</code>) before assigning the results to <code>totalApples</code>. This is why you get 31 if tried to log <code>totalApples</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log(totalApples) // 31
+</code></pre></div></div>
+
+<h4 id="the-const-keyword">The const keyword</h4>
+
+<p><code>const</code> is one of three keywords you can use to declare variables. There are two other keywords – <code>let</code> and <code>var</code>.
+All three keywords declare variables, but they’re slightly different from each other.</p>
+
+<h3 id="const-vs-let-vs-var">Const vs let vs var</h3>
+
+<p><code>const</code> and <code>let</code> are keywords made available to us in ES6. They are better keywords to create variables than <code>var</code> because they’re block scoped while var is function scoped.</p>
+
+<p>For now, let’s concentrate on the difference between <code>const</code> and <code>let</code>.</p>
+
+<h3 id="const-vs-let">Const vs let</h3>
+
+<p><strong>If you declare a variable with <code>const</code></strong>, you cannot reassign it with a new value. The following code produces an error:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const applesToBuy = 22
 
 // Reassigning to a variable declared with const results in an error
 applesToBuy = 27
-</code></pre></div></div><p><strong>If you declare a variable with <code>let</code>, you can reassign it with a new value.</strong></p><div class=highlighter-rouge><div class=highlight><pre class=highlight><code>let applesToBuy = 22
+</code></pre></div></div>
+
+<p><strong>If you declare a variable with <code>let</code>, you can reassign it with a new value.</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let applesToBuy = 22
 applesToBuy = 27
 console.log(applesToBuy)
-</code></pre></div></div><h3 id=should-you-use-const-or-let>Should you use const or let?</h3><p>Understanding whether you should use <code>const</code> or <code>let</code> is more of an advanced topic.</p><p>When you’re starting out, using <code>let</code> would be much simpler than using <code>const</code>.</p><p>However, as you write more programs, you’ll slowly realize that you want to refrain from reassigning your variables, and you’ll begin to use <code>const</code> over <code>let</code>. Why you’ll want to do so is a different topic for another day.</p><p>Since you’re going to use <code>const</code> over <code>let</code> anyway when you write more advanced programs, it’s better to get into the habit of preferring <code>const</code> over <code>let</code> when you’re starting out.</p><p>In case you’re wondering, don’t use var anymore, because there’s no need for it. <code>let</code> and <code>const</code> are much better than var.</p><h3 id=wrapping-up>Wrapping up</h3><p>In JavaScript, variables are used to hold a value. It can hold any value, from primitives to objects.</p><p>The <code>=</code> sign in JavaScript isn’t the same as the <code>=</code> sign in Math. In JavaScript, <code>=</code> means assignment.</p><p>When you declare variables, use camelCase to name your variables. Avoid the reserved keywords.</p><p>You can declare variables with either <code>const</code>, <code>let</code> or <code>var</code>. As much as possible, you’ll want to use <code>const</code> over <code>let</code>. Use <code>let</code> when you need to reassign values. There’s no longer a need to use <code>var</code>.</p><p></p></div></section></div><section id=newsletter class=desaturate><div class=inner><div class=12u><h2 style="text-align: center">Subscribe for Weekly Blog</h2><p style="text-align: center">Sign up to receive articles learning about web development, JavaScript fundamentals, data stuctures and algorithms, and much more!</p><form style="text-align: center; margin: 0" action="https://williamdiep.us17.list-manage.com/subscribe/post?u=b37a4507c40405ff08a12ae50&amp;id=1ed4dd3cf5" id=subscribe-form method=post novalidate><div><input type=email class="form-control input-subscribe" id=mce-EMAIL name=EMAIL placeholder="Enter email address" required><label for=mce-EMAIL></label></div><br><button type=submit class=btn>Subscribe</button><br><br><p style="text-align: center; font-size: 0.7em">You can unsubscribe at any time</p></form></div></div></section><section><a href=# id=return-to-top><i class="fa fa-chevron-up" aria-hidden=true></i></a></section><section id=contact><div class=inner><section><header class=major><h2>Contact</h2></header><h3>Are you looking for a professional, communicative &amp; punctual software developer with full-stack web development skills for your next project?</h3><p>If you have an application you are interested in developing with web technology, I’d love to work with you on it. I’m a full-stack developer which means I can bring your project from concept to completion. Although I've been work primarily with ReactJS on the front-end, and Rails and NodeJS on the back-end, picking up new languages or frameworks is not a problem.</p><form action=https://formspree.io/willwebdesigns@gmail.com method=POST><div class="field half first"><label for=name>Name</label><input type=email name=name id=name></div><div class="field half"><label for=email>Email</label><input type=email name=_replyto id=email></div><div class=field><label for=message>Message</label><textarea name=message id=message rows=6 placeholder="Hey William! I would like to drop a note to say..."></textarea></div><ul class=actions><li><input type=submit value="Send Message" class=special></li><li><input type=reset value=Clear></li></ul></form></section></div></section><footer id=footer><div class=inner><ul class=icons><li><a href=https://github.com/willdiep class="icon alt fa-github" target=_blank><span class=label>GitHub</span></a></li><li><a href=https://www.linkedin.com/in/wdiep class="icon alt fa-linkedin" target=_blank><span class=label>LinkedIn</span></a></li></ul><ul class=copyright><li>&copy; 2017 William Diep All Rights Reserved</li></ul></div></footer></div><script src=/assets/javascript/index-6ef757b174.min.js></script></body></html>
+</code></pre></div></div>
+
+<h3 id="should-you-use-const-or-let">Should you use const or let?</h3>
+
+<p>Understanding whether you should use <code>const</code> or <code>let</code> is more of an advanced topic.</p>
+
+<p>When you’re starting out, using <code>let</code> would be much simpler than using <code>const</code>.</p>
+
+<p>However, as you write more programs, you’ll slowly realize that you want to refrain from reassigning your variables, and you’ll begin to use <code>const</code> over <code>let</code>. Why you’ll want to do so is a different topic for another day.</p>
+
+<p>Since you’re going to use <code>const</code> over <code>let</code> anyway when you write more advanced programs, it’s better to get into the habit of preferring <code>const</code> over <code>let</code> when you’re starting out.</p>
+
+<p>In case you’re wondering, don’t use var anymore, because there’s no need for it. <code>let</code> and <code>const</code> are much better than var.</p>
+
+<h3 id="wrapping-up">Wrapping up</h3>
+
+<p>In JavaScript, variables are used to hold a value. It can hold any value, from primitives to objects.</p>
+
+<p>The <code>=</code> sign in JavaScript isn’t the same as the <code>=</code> sign in Math. In JavaScript, <code>=</code> means assignment.</p>
+
+<p>When you declare variables, use camelCase to name your variables. Avoid the reserved keywords.</p>
+
+<p>You can declare variables with either <code>const</code>, <code>let</code> or <code>var</code>. As much as possible, you’ll want to use <code>const</code> over <code>let</code>. Use <code>let</code> when you need to reassign values. There’s no longer a need to use <code>var</code>.</p>
+</p>
+		
+	</div>
+</section>
+
+</div>
+
+	<section id="newsletter" class="desaturate">
+  <div class="inner">
+    <div class="12u">
+      <h2 style="text-align: center;">Subscribe for Weekly Blog</h2>
+      <p style="text-align: center;">Sign up to receive articles learning about web development, JavaScript fundamentals, data stuctures and algorithms, and
+        much more!</p>
+
+      <form style="text-align: center; margin: 0;" action="https://williamdiep.us17.list-manage.com/subscribe/post?u=b37a4507c40405ff08a12ae50&amp;id=1ed4dd3cf5" id="subscribe-form" method="post" novalidate="true">
+        <div>
+          <input type="email" class="form-control input-subscribe" id="mce-EMAIL" name="EMAIL" placeholder="Enter email address" required="">
+          <label for="mce-EMAIL"></label>
+        </div>
+
+        <br/>
+
+        <button type="submit" class="btn">Subscribe</button>
+
+        <br/>
+        <br/>
+
+        <p style="text-align: center; font-size: 0.7em;">You can unsubscribe at any time</p>
+
+      </form>
+    </div>
+  </div>
+  <!-- ./inner -->
+</section>
+
+
+    <!-- Return To Top Arrow -->
+<section>
+  <a href="#" id="return-to-top">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </a>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="inner">
+    <section>
+      <header class="major">
+        <h2>Contact</h2>
+      </header>
+
+      <!-- <h3>Are you looking for a professional, communicative &amp; punctual software developer with full-stack web development -->
+      <h3>Are you looking for a professional, communicative &amp; punctual Front End Developer for your next project?</h3>
+
+      <!-- <p>If you have an application you are interested in developing with web technology, I’d love to work with you on it. I’m -->
+        <!-- a full-stack developer which means I can bring your project from concept to completion. Although I've been work primarily with ReactJS on the front-end, and Rails and NodeJS on the back-end, picking up new languages or frameworks is not a problem.</p> -->
+
+      <p>If you have an application you are interested in developing with web technology, I’d love to work with you on it. I have experience with full-stack development who specializes more on the front end, which means I can bring your project from concept to completion. Although I've been work primarily with ReactJS on the front-end and NodeJS on the back-end, picking up new languages or frameworks is not a problem.</p>
+
+      <form action="https://formspree.io/willwebdesigns@gmail.com" method="POST">
+        <div class="field half first">
+          <label for="name">Name</label>
+          <input type="email" name="name" id="name" />
+        </div>
+        <div class="field half">
+          <label for="email">Email</label>
+          <input type="email" name="_replyto" id="email" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6" placeholder="Hi William, I'd like to reach out to..."></textarea>
+        </div>
+        <ul class="actions">
+          <li>
+            <input type="submit" value="Send Message" class="special" />
+          </li>
+          <li>
+            <input type="reset" value="Clear" />
+          </li>
+        </ul>
+      </form>
+    </section>
+    <!-- <section class="split">
+			<section>
+				<div class="contact-method">
+					<span class="icon alt fa-envelope"></span>
+					<h3>Email</h3>
+					<a href="#">willwebdesigns@gmail.com</a>
+				</div>
+			</section>
+			<section>
+				<div class="contact-method">
+					<span class="icon alt fa-phone"></span>
+					<h3>Phone</h3>
+					<span></span>
+				</div>
+			</section>
+			<section>
+				<div class="contact-method">
+					<span class="icon alt fa-home"></span>
+					<h3>Address</h3>
+					<span>
+					
+					
+					    San Francisco Bay Area,
+					
+					
+					    CA 
+					
+					
+					
+					</span>
+				</div>
+			</section>
+		</section> -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <ul class="icons">
+             
+      <li>
+        <a href="https://github.com/willdiep" class="icon alt fa-github" target="_blank">
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+        
+      <li>
+        <a href="https://www.linkedin.com/in/wdiep" class="icon alt fa-linkedin" target="_blank">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+      
+    </ul>
+    <ul class="copyright">
+      <li>&copy; 2019 William Diep  All Rights Reserved</li>
+      <!-- <li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li> -->
+      <!-- <li>Jekyll integration: <a href="http://andrewbanchi.ch" target="_blank">Andrew Banchich</a></li> -->
+
+    </ul>
+  </div>
+</footer>
+
+</div>
+
+
+	<!-- JS -->
+	<!-- inject:js -->
+	<script src="/assets/javascript/index.js"></script>
+	<!-- endinject -->
+</body>
+
+</html>

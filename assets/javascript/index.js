@@ -1537,13 +1537,13 @@ $(function () {
   var data = [{
       action: 'type',
       strings: ["william.technologies"],
-      output: '<span class="gray">["HTML5/CSS3", "JavaScript/ES6", "ReactJS", "NodeJS", "MongoDB"]</span><br>&nbsp;',
+      output: '<span class="gray">["HTML5/CSS3", "JavaScript", "ReactJS", "NodeJS"]</span><br>&nbsp;',
       postDelay: 1000
     },
     {
       action: 'type',
       strings: ["william.education"],
-      output: '<span class="gray">Bachelor of Science, San Jose State University, GPA 3.4/4.0</span><br>&nbsp;',
+      output: '<span class="gray">Bachelor of Science, San Jose State University</span><br>&nbsp;',
       postDelay: 1000
     },
     {
@@ -1562,3 +1562,4 @@ $(function () {
   ];
   runScripts(data, 0);
 });
+//# sourceMappingURL=index.js.map
