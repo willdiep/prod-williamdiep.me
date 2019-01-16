@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-01-15T18:42:35-08:00</updated><id>/</id><title type="html">William Diep</title><subtitle>I’m a web developer from the San Franciso Bay Area. I work primarily with ReactJS and NodeJS</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author><entry><title type="html">What is ‘this’ in JavaScript?</title><link href="/2017/11/30/this.html" rel="alternate" type="text/html" title="What is 'this' in JavaScript?" /><published>2017-11-30T00:00:00-08:00</published><updated>2017-11-30T00:00:00-08:00</updated><id>/2017/11/30/this</id><content type="html" xml:base="/2017/11/30/this.html">&lt;h3 id=&quot;are-you-confused-by-the-this-keyword-in-javascript-it-confuses-everyone-in-the-beginning-so-dont-worry-about-it-youre-not-alone&quot;&gt;Are you confused by the &lt;code&gt;this&lt;/code&gt; keyword in JavaScript? It confuses everyone in the beginning, so don’t worry about it. You’re not alone.&lt;/h3&gt;
+
+&lt;p&gt;But that doesn’t mean you can go on without understanding &lt;code&gt;this&lt;/code&gt; forever. It is used so much in JavaScript and in tutorials everywhere that you need to grasp what &lt;code&gt;this&lt;/code&gt; is sooner or later. Once you understand &lt;code&gt;this&lt;/code&gt;, you’ll realize that it’s much simpler than you think it is.&lt;/p&gt;
+
+&lt;p&gt;By the end of this article, you would have demystified this for yourself. You’ll know what it is, what it does and how to use it.&lt;/p&gt;
+
+&lt;h2 id=&quot;so-what-is-this&quot;&gt;So, what is this?&lt;/h2&gt;
+
+&lt;p&gt;this is a keyword whose value changes depending on how a function gets called. There six different ways where this can take on new values. They are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;this&lt;/code&gt; in global context&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;this&lt;/code&gt; in object construction&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;this&lt;/code&gt; in an object method&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;this&lt;/code&gt; in a simple function&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;this&lt;/code&gt; in an arrow function&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;this&lt;/code&gt; in an event listener&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You may wonder what &lt;code&gt;this&lt;/code&gt; is in each context and why there’s a need to change &lt;code&gt;this&lt;/code&gt; in the first place. To answer your question, let look at how &lt;code&gt;this&lt;/code&gt; changes in each of the six contexts.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-in-a-global-context&quot;&gt;This in a global context&lt;/h3&gt;
+&lt;p&gt;When &lt;code&gt;this&lt;/code&gt; is called outside of any function, in a global context, this defaults to the &lt;code&gt;Window&lt;/code&gt; object in the browser.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;console.log(this) // Window
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Usually, you wouldn’t use &lt;code&gt;this&lt;/code&gt; in a global context anyway, so the value of &lt;code&gt;this&lt;/code&gt; here doesn’t really matter. Let’s move on to the next context.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-in-object-construction&quot;&gt;This in object construction&lt;/h3&gt;
+&lt;p&gt;When you create a new instance of an object with the new keyword, this refers to the instance.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function Human (age) {
+  this.age = age
+}
+
+let greg = new Human(22)
+let thomas = new Human(24)
+
+console.log(greg) // this.age = 22
+console.log(thomas) // this.age = 24
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see that &lt;code&gt;greg&lt;/code&gt; is an instance of &lt;code&gt;Human&lt;/code&gt; in the code above. Now, whenever you reference &lt;code&gt;greg&lt;/code&gt;, you won’t accidentally get &lt;code&gt;thomas&lt;/code&gt;. So, setting &lt;code&gt;this&lt;/code&gt; to be the instance makes perfect sense.&lt;/p&gt;
+
+&lt;p&gt;Let’s look at a closely related context next – &lt;code&gt;this&lt;/code&gt; in an object method.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-in-an-object-method&quot;&gt;This in an object method&lt;/h3&gt;
+&lt;p&gt;Methods are fancy words for functions that are associated with an object, like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let o = {
+  // A method
+  aMethod () {}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;this&lt;/code&gt; within any method refers to the object itself.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let o = {
+  sayThis () {
+    console.log(this)
+  }
+}
+
+o.sayThis() // o
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Since &lt;code&gt;this&lt;/code&gt; refers to the object, you can use methods to get the instance of an object, like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function Human (name) {
+  return {
+    name,
+    getName() {
+      return this.name
+    }
+  }
+}
+
+const will = new Human('Will')
+const sarah = new Human('Sarah')
+
+console.log(will.getName()) // Will
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In these two object contexts, you can see that the changed value of &lt;code&gt;this&lt;/code&gt; lets you get the right instance, which is the basis for Object-oriented programming. That’s a topic for another day though.&lt;/p&gt;
+
+&lt;p&gt;Let’s move on to the next context.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-in-a-simple-function&quot;&gt;This in a simple function&lt;/h3&gt;
+&lt;p&gt;Simple functions are functions you know extremely well; like the one below. Anonymous functions written in the same form are also considered simple functions.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function hello () {
+  // say hello!
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;On browsers, &lt;code&gt;this&lt;/code&gt; is always set to &lt;code&gt;Window&lt;/code&gt; in a simple function. The same is true even if you call a simple function in an object method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function simpleFunction () {
+  console.log(this)
+}
+
+const o = {
+  sayThis () {
+    simpleFunction()
+  }
+}
+
+simpleFunction() // Window
+o.sayThis() // Window
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Unfortunately, the change in &lt;code&gt;this&amp;lt;c/ode&amp;gt; is unexpected for beginners. They expect &lt;code&gt;this&lt;/code&gt; to remain the same within object methods. I got caught in it too.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To see why, consider the following code. Here, a &lt;code&gt;this.speakLeet&lt;/code&gt; function is executed later within a &lt;code&gt;setTimeout&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const o = {
+  doSomethingLater () {
+    setTimeout(function() {
+      this.speakLeet() // Error
+    }, 1000)
+  },
+  speakLeet() {
+    console.log(`1337 15 4W350M3`)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Unfortunately, the code above results in an error. The error occurs because &lt;code&gt;this&lt;/code&gt; is set to &lt;code&gt;Window&lt;/code&gt; in the &lt;code&gt;setTimeout&lt;/code&gt; function. &lt;code&gt;Window&lt;/code&gt; does not have a &lt;code&gt;speakLeet&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;p&gt;One quick fix is to create a variable that stores the reference to the &lt;code&gt;this&amp;lt;/code. This variable is often called &lt;code&gt;self&amp;lt;/code or &lt;code&gt;that&amp;lt;/code.&lt;/code&gt;&lt;/code&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const o = {
+  doSomethingLater () {
+    const self = this
+    setTimeout(function() {
+      self.speakLeet()
+    }, 1000)
+  },
+  speakLeet() {
+    console.log(`1337 15 4W350M3`)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A second way to fix this problem is to use the new ES6 arrow functions, which brings us to the next context.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-in-arrow-functions&quot;&gt;This in arrow functions&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;this&lt;/code&gt; in an arrow function is always the same as &lt;code&gt;this&lt;/code&gt; around it (in its immediate scope). So, if you use arrow functions within an object method, the &lt;code&gt;this&lt;/code&gt; context stays as the object, not &lt;code&gt;Window&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;With arrow functions, the &lt;code&gt;speakLeet&lt;/code&gt; example could be written in the following way:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const o = {
+  doSomethingLater () {
+    setTimeout(() =&amp;gt; this.speakLeet(), 1000)
+  },
+  speakLeet() {
+    console.log(`1337 15 4W350M3`)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A third way to change the value of &lt;code&gt;this&lt;/code&gt; within any function is to use either &lt;code&gt;bind&lt;/code&gt;, &lt;code&gt;call&lt;/code&gt; or &lt;code&gt;apply&lt;/code&gt;. We’ll look at &lt;code&gt;bind&lt;/code&gt; later in the article, and &lt;code&gt;call&lt;/code&gt; and &lt;code&gt;apply&lt;/code&gt; another time. But first, let’s go through the final context — event listeners.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-in-event-listeners&quot;&gt;This in event listeners&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;this&lt;/code&gt; is set to the element that fired the event in an event listener:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let button = document.querySelector('button')
+
+button.addEventListener('click', function() {
+  console.log(this) // button
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When creating more complex components, you may find yourself creating event listeners within methods.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function LeetSpeaker (elem) {
+  return {
+    listenClick () {
+      elem.addEventListener('click', function () {
+        // Do something here
+      })
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Since &lt;code&gt;this&lt;/code&gt; refers to the element in the event listener, if you need to activate another method, you need to provide a reference to the object with.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function LeetSpeaker (elem) {
+  return {
+    listenClick () {
+      const self = this
+      elem.addEventListener('click', function () {
+        self.speakLeet()
+      })
+    },
+    speakLeet() { console.log(`1337 15 4W350M3`) }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Alternatively, you can use an arrow function. If you do so, you can still get the element with &lt;code&gt;event.currentTarget&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function LeetSpeaker (elem) {
+  return {
+    listenClick () {
+      elem.addEventListener('click', (e) =&amp;gt; {
+        console.log(e.currentTarget) // elem
+        this.speakLeet()
+      })
+    },
+    speakLeet() { console.log(`1337 15 4W350M3`) }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But both methods aren’t good enough to help you remove event listeners when the need arises, both are anonymous functions.&lt;/p&gt;
+
+&lt;p&gt;To remove an event listener, the callback passed as the second value needs to be a named function:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function someFunction () {
+  console.log('do something')
+
+  // Removes the event listener.
+  document.removeEventListener('click', someFunction)
+}
+
+document.addEventListener('click', someFunction)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you need &lt;code&gt;this&lt;/code&gt; to reference the object in an event listener, you need to use &lt;code&gt;bind&lt;/code&gt; to manually create a &lt;code&gt;this&lt;/code&gt; context.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function LeetSpeaker (elem) {
+  return {
+    listenClick () {
+      this.listener = this.speakLeet.bind(this)
+      elem.addEventListener('click', this.listener)
+    },
+
+    speakLeet(e) {
+      const elem = e.currentTarget
+      console.log(`1337 15 4W350M3`)
+      elem.removeEventListener('click', this.listener)
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The code above may confuse you if you’ve don’t understand &lt;code&gt;bind&lt;/code&gt;. So, before I show you what is happening, let’s take a detour and understand what &lt;code&gt;bind&lt;/code&gt; does.&lt;/p&gt;
+
+&lt;h3 id=&quot;changing-this-with-bind&quot;&gt;Changing this with bind&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;bind&lt;/code&gt; is a method that is present in every function. It allows you to change the &lt;code&gt;this&lt;/code&gt; context. This method takes in any number of arguments and returns the bound function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function sayThis () {
+  console.log(this)
+}
+const boundFunc = sayThis.bind(/* arguments...*/)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The first parameter you pass into &lt;code&gt;bind&lt;/code&gt; becomes &lt;code&gt;this&lt;/code&gt; in the bound function. Once you have created a bound function, you can call it anytime you wish:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function sayThis () {
+  console.log(this)
+}
+
+const boundFunc = sayThis.bind({hippy: 'hipster'})
+boundFunc()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The other parameters you pass to &lt;code&gt;bind&lt;/code&gt; will be passed as arguments to the original function&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function sayParams (...args) {
+  console.log(...args)
+}
+const boundFunc = sayParams.bind(null, 1, 2, 3, 4, 5)
+boundFunc()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note: &lt;code&gt;bind doesn’t work with arrow functions.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s really all you need to know about &lt;code&gt;bind&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s look back at the code to remove event listeners and dissect what is happening:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function LeetSpeaker (elem) {
+  return {
+    listenClick () {
+      // Binds this.speakLeet with a reference to the instance.
+      // Sets bound function to this.listener, so we can remove it later.
+      this.listener = this.speakLeet.bind(this)
+      elem.addEventListener('click', this.listener)
+    },
+
+    speakLeet(e) {
+      console.log(`1337 15 4W350M3`)
+
+      // Gets the element so we can remove the event listener.
+      const elem = e.currentTarget
+
+      // Removes the event listener.
+      elem.removeEventListener('click', this.listener)
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And that’s all you need to know about &lt;code&gt;this&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s wrap up.&lt;/p&gt;
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;this&lt;/code&gt; is a crucial keyword in JavaScript. It appears in many JavaScript frameworks, so you have to know what it does.&lt;/p&gt;
+
+&lt;p&gt;In this article, you learned about the six different contexts where &lt;code&gt;this&lt;/code&gt; takes on different values. You also learned how to change the &lt;code&gt;this&lt;/code&gt; context with functions like &lt;code&gt;bind&lt;/code&gt;. Additionally, you also learned to remove event listeners properly.&lt;/p&gt;
+
+&lt;p&gt;That’s all you need to know about this. Just master the concepts taught in this article and you won’t ever get confused anymore.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author></entry><entry><title type="html">Are you overcomplicating your own learning?</title><link href="/2017/11/23/overcomplicate.html" rel="alternate" type="text/html" title="Are you overcomplicating your own learning?" /><published>2017-11-23T00:00:00-08:00</published><updated>2017-11-23T00:00:00-08:00</updated><id>/2017/11/23/overcomplicate</id><content type="html" xml:base="/2017/11/23/overcomplicate.html">&lt;h2 id=&quot;learning-a-new-concept-can-be-tricky-especially-when-you-sabotage-yourself&quot;&gt;Learning a new concept can be tricky, especially when you sabotage yourself.&lt;/h2&gt;
+
+&lt;h3 id=&quot;heres-how-it-happens&quot;&gt;Here’s how it happens:&lt;/h3&gt;
+&lt;p&gt;Quickly learn about A.
+Quickly learn about B.
+Learn about C, which builds on A and B.
+Wait, I don’t remember A.
+Ok so I’m going to go back and look at A.
+Now I’ve forgotten B.
+What was C again?
+C seems useful, but it’s like a house of cards in my head trying to stack up A, B, and C together.
+This whole subject is too complicated.
+Maybe I’ll try it later.
+6 months pass with no action.
+I tried, but it was too difficult. Maybe some other time.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-you-end-up-thinking&quot;&gt;What you end up thinking:&lt;/h3&gt;
+&lt;p&gt;Item C is too complicated.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-truth&quot;&gt;The truth:&lt;/h3&gt;
+&lt;p&gt;Item C is not complicated. It just felt that way because you were trying to learn C while 80% of your brain was distracted trying to remember/learn A and remember/learn B.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-solution&quot;&gt;The solution:&lt;/h3&gt;
+&lt;p&gt;Get comfortable with one thing at a time. If you find yourself having to remember/learn B while you’re on C, then try going back to B and getting comfortable with it. Sometimes that can take as little as a few focused minutes.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author></entry><entry><title type="html">What are variables in JavaScript?</title><link href="/2017/11/16/variables.html" rel="alternate" type="text/html" title="What are variables in JavaScript?" /><published>2017-11-16T00:00:00-08:00</published><updated>2017-11-16T00:00:00-08:00</updated><id>/2017/11/16/variables</id><content type="html" xml:base="/2017/11/16/variables.html">&lt;h2 id=&quot;the-main-purpose-of-coding-is-to-solve-problems-what-happens-when-you-click-on-a-button-thats-also-a-problem-for-us-to-solve&quot;&gt;The main purpose of coding is to solve problems. What happens when you click on a button? That’s also a problem for us to solve.&lt;/h2&gt;
+
+&lt;p&gt;So, let’s begin this article by solving a simple problem.&lt;/p&gt;
+
+&lt;h3 id=&quot;counting-apples&quot;&gt;Counting apples&lt;/h3&gt;
+
+&lt;p&gt;If you have 4 apples and you buy 27 more, how many apples do you have? Take a second and write your answer in your text editor.
+What’s your answer?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// This?
+31
+
+// Or this?
+4 + 27
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Both answers are right, but the second method is better, because you’re offloading the calculation to JavaScript. You’re teaching it how to arrive at the answer.&lt;/p&gt;
+
+&lt;p&gt;But there’s still one problem with the code.&lt;/p&gt;
+
+&lt;p&gt;If you look at &lt;code&gt;4 + 27&lt;/code&gt; without any context from our apple problem, do you know we’re calculating the number of apples you’re currently holding?
+Probably not.&lt;/p&gt;
+
+&lt;p&gt;So, a better way is to use Algebra to substitute 4 and 27 with variables. When you do so, you’ll get the ability to write code that has meaning:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;initialApples + applesBought
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The process of substituting 4 with a variable called &lt;code&gt;initialApples&lt;/code&gt; is called declaring variables.&lt;/p&gt;
+
+&lt;h3 id=&quot;declaring-variables&quot;&gt;Declaring Variables&lt;/h3&gt;
+
+&lt;p&gt;You declare variables with the following syntax:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const variableName = 'value'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There are four parts you’ll want to take note of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The &lt;code&gt;variableName&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;value&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;=&lt;/code&gt; sign&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;const&lt;/code&gt; keyword&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-variablename&quot;&gt;The variableName&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;variableName&lt;/code&gt; is the name of the variable you’re declaring. You can name it anything, as long as it follows these rules:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It must be one word&lt;/li&gt;
+  &lt;li&gt;It must consist only of letters, numbers or underscores (0-9, a-z, A-Z, _).&lt;/li&gt;
+  &lt;li&gt;It cannot begin with a number.&lt;/li&gt;
+  &lt;li&gt;It cannot be any of these &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords&quot; target=&quot;_blank&quot;&gt;reserved keywords&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you need to use two or more words to name your variable, you should join the words together, but capitalize the first letter of each subsequent word. 
+This weird capitalization is called camel case.&lt;/p&gt;
+
+&lt;p&gt;A good example of a camel cased variable is &lt;code&gt;applesToBuy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-value&quot;&gt;The value&lt;/h4&gt;
+
+&lt;p&gt;The value is what you want the variable to be. It can be primitives (like strings and numbers etc) or objects (like arrays and functions).&lt;/p&gt;
+
+&lt;h4 id=&quot;-in-javascript&quot;&gt;= in JavaScript&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;=&lt;/code&gt; in JavaScript doesn’t work like &lt;code&gt;=&lt;/code&gt; in Math. Don’t get confused.&lt;/p&gt;
+
+&lt;p&gt;In JavaScript, &lt;code&gt;=&lt;/code&gt; means assignment. When you use &lt;code&gt;=&lt;/code&gt;, you set (or assign) the value on the right hand side (RHS) of the &lt;code&gt;=&lt;/code&gt; sign to the left hand side (LHS) of the &lt;code&gt;=&lt;/code&gt; sign.&lt;/p&gt;
+
+&lt;p&gt;In the following statement, you set the variable &lt;code&gt;initialApples&lt;/code&gt; to the number 4.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const initialApples = 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you console.log this variable, you can see that &lt;code&gt;initialApples&lt;/code&gt; is 4.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;console.log(initialApples) // 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;evaluation-before-assignment&quot;&gt;Evaluation before assignment&lt;/h4&gt;
+
+&lt;p&gt;Every variable can only take up one value. So, if you have an equation that needs to be evaluated on the RHS, it will be evaluated before it is assigned to the variable.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const initialApples = 4
+const applesToBuy = 27
+
+const totalApples = initialApples + applesToBuy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this example, JavaScript will evaluate the answer of &lt;code&gt;initialApples + applesToBuy&lt;/code&gt; (which results to &lt;code&gt;31&lt;/code&gt;) before assigning the results to &lt;code&gt;totalApples&lt;/code&gt;. This is why you get 31 if tried to log &lt;code&gt;totalApples&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;console.log(totalApples) // 31
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;the-const-keyword&quot;&gt;The const keyword&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;const&lt;/code&gt; is one of three keywords you can use to declare variables. There are two other keywords – &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;var&lt;/code&gt;.
+All three keywords declare variables, but they’re slightly different from each other.&lt;/p&gt;
+
+&lt;h3 id=&quot;const-vs-let-vs-var&quot;&gt;Const vs let vs var&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;const&lt;/code&gt; and &lt;code&gt;let&lt;/code&gt; are keywords made available to us in ES6. They are better keywords to create variables than &lt;code&gt;var&lt;/code&gt; because they’re block scoped while var is function scoped.&lt;/p&gt;
+
+&lt;p&gt;For now, let’s concentrate on the difference between &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;let&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;const-vs-let&quot;&gt;Const vs let&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;If you declare a variable with &lt;code&gt;const&lt;/code&gt;&lt;/strong&gt;, you cannot reassign it with a new value. The following code produces an error:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const applesToBuy = 22
+
+// Reassigning to a variable declared with const results in an error
+applesToBuy = 27
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;If you declare a variable with &lt;code&gt;let&lt;/code&gt;, you can reassign it with a new value.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let applesToBuy = 22
+applesToBuy = 27
+console.log(applesToBuy)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;should-you-use-const-or-let&quot;&gt;Should you use const or let?&lt;/h3&gt;
+
+&lt;p&gt;Understanding whether you should use &lt;code&gt;const&lt;/code&gt; or &lt;code&gt;let&lt;/code&gt; is more of an advanced topic.&lt;/p&gt;
+
+&lt;p&gt;When you’re starting out, using &lt;code&gt;let&lt;/code&gt; would be much simpler than using &lt;code&gt;const&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, as you write more programs, you’ll slowly realize that you want to refrain from reassigning your variables, and you’ll begin to use &lt;code&gt;const&lt;/code&gt; over &lt;code&gt;let&lt;/code&gt;. Why you’ll want to do so is a different topic for another day.&lt;/p&gt;
+
+&lt;p&gt;Since you’re going to use &lt;code&gt;const&lt;/code&gt; over &lt;code&gt;let&lt;/code&gt; anyway when you write more advanced programs, it’s better to get into the habit of preferring &lt;code&gt;const&lt;/code&gt; over &lt;code&gt;let&lt;/code&gt; when you’re starting out.&lt;/p&gt;
+
+&lt;p&gt;In case you’re wondering, don’t use var anymore, because there’s no need for it. &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; are much better than var.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h3&gt;
+
+&lt;p&gt;In JavaScript, variables are used to hold a value. It can hold any value, from primitives to objects.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;=&lt;/code&gt; sign in JavaScript isn’t the same as the &lt;code&gt;=&lt;/code&gt; sign in Math. In JavaScript, &lt;code&gt;=&lt;/code&gt; means assignment.&lt;/p&gt;
+
+&lt;p&gt;When you declare variables, use camelCase to name your variables. Avoid the reserved keywords.&lt;/p&gt;
+
+&lt;p&gt;You can declare variables with either &lt;code&gt;const&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; or &lt;code&gt;var&lt;/code&gt;. As much as possible, you’ll want to use &lt;code&gt;const&lt;/code&gt; over &lt;code&gt;let&lt;/code&gt;. Use &lt;code&gt;let&lt;/code&gt; when you need to reassign values. There’s no longer a need to use &lt;code&gt;var&lt;/code&gt;.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;github&quot;=&gt;nil}</name></author></entry></feed>
